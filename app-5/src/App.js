@@ -1,23 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
+import RenderImg from './components/RenderImg';
+import React, { useState } from 'react'
 
 function App() {
+  const [img, setImg] = useState('https://variety.com/wp-content/uploads/2021/07/Rick-Astley-Never-Gonna-Give-You-Up.png?w=1024')
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <RenderImg imgSrc={img} />
     </div>
   );
 }
